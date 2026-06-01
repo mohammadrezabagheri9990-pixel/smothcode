@@ -1,0 +1,2 @@
+# smothcode
+smothcode template
