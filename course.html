@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="fa" dir="rtl" translate="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/bootstrap.rtl.css" />
+    <link
+      rel="stylesheet"
+      href="/css/bootstrap-icons-1.13.1/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/course.css">
+    <title>اسموت پلیر</title>
+  </head>
+  <body>
+    <div class="progress" id="progress"></div>
+    <div id="hain">
+      <div class="col-12 px-2 col-lg-6">
+        <h1><b class="brand-1">اسموت</b> <b class="brand-2">پلیر</b></h1>
+        <hr>
+        <h3 id="write"></h3>
+        <button class="btn btn-danger btn-lg mt-2" id="btn-hain"><i class="bi bi-x-lg" style="margin-left: 5px;"></i>بستن</button>
+      </div>
+    </div>
+<script>
+  const hain = document.getElementById('hain');
+const write_ = document.getElementById('write');
+const text = 'این دوره آنلاین به <span class="text-danger">پایان رسیده</span> و هم اکنون به صورت آفلاین <span class="text-success">در دسترس</span> است .';
+const btn_hain =document.getElementById('btn-hain');
+let i = 0;
+
+const typingInterval = setInterval(() => {
+    i++;
+    write_.innerHTML = text.slice(0, i);
+    
+    if (i >= text.length) {
+        clearInterval(typingInterval);
+    }
+}, 40);
+
+setTimeout(() => {
+    clearInterval(typingInterval);
+}, 140000);
+btn_hain.addEventListener('click',()=>{
+  hain.style.display='none';
+});
+</script>
+    <header>
+      <nav class="navbar d-none d-lg-flex navbar-expand nav-desk">
+        <div class="brand">
+          <b class="brand-1">اسموت</b> <b class="brand-2">پلیر</b>
+        </div>
+        <ul class="nav navbar-nav w-100 justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link nav-a" href="#" aria-current="page">خانه</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-a" href="#">درباره ما</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" href="#">دوره ها</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-a" href="#">مسیر یادگیری</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link nav-a" href="#" data-bs-toggle="modal"
+        data-bs-target="#modallogin">پروفایل</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="navbar nav-mobile border border-1 d-lg-none">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><b class="brand-1">اسموت</b> <b class="brand-2">پلیر</b></a
+          >
+          <button
+            class="navbar-toggler navbar-toggler-mobile"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <svg
+              width="26px"
+              height="26px"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.2027 4.90034V6.43655H2.79724V4.90034H17.2027Z"
+                fill="currentColor"
+              />
+
+              <path
+                d="M17.2027 9.90034V11.4366H2.79724V9.90034H17.2027Z"
+                fill="currentColor"
+              />
+
+              <path
+                d="M10.9603 14.9003V16.4366H2.79724V14.9003H10.9603Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+ <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <b class="brand-1">اسموت</b> <b class="brand-2">پلیر</b>
+              </h5>
+              <button
+                type="button"
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+            <a class="nav-link text-primary" href="/index.html" aria-current="page">خانه</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-a" href="#">درباره ما</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-a" data-bs-toggle="dropdown"
+              type="button"
+              aria-haspopup="true" id="courses" href="#">دوره ها</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-a" href="/learn-way.html">مسیر یادگیری</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link nav-a" href="/login.html" data-bs-toggle="modal"
+        data-bs-target="#modallogin">ورود</a>
+          </li>
+              </ul>
+              <hr>
+              <div class="search-nav w-25 me-5">
+         <form class="d-flex">
+                <input
+                  class="form-control"
+                  type="search"
+                  placeholder="جست و جو ..."
+                  aria-label="جست و جو"
+                />
+                <button class="btn" type="submit">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-314d6803=""><path d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z" stroke="currentColor" stroke-width="1.5"></path><path d="M18.5 18.5L22 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+                </button>
+              </form>
+        </div>
+            </div>
+          </div>
+      <div class="header-control">
+        <div class="header-content">
+          <div class="col-lg-8 mt-4 mt-lg-0">      
+            <div class="mb-3 tage-2">سطح : <span class="co-level bg-light-green text-success">متوسط</span><div class="pop"></div>
+            نوع دوره : <span style="text-decoration: underline 2px gray">آفلاین</span></div>        
+            <h1 class="bold mb-4 tage">
+             آموزش <strong class="theme-color2">پایتون</strong>
+            </h1>
+            <p>
+              لورم ایپسوم متن ساختگی با تولید س ادگی نامفهوم از صنعت چاپ و با
+              کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و  لورم ایپسوم متن ساختگی با تولید س ادگی نامفهوم از صنعت چاپ و با
+              کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و
+            </p>
+            <h5>قیمت : <span class="course-pay">رایگان! <span class="course-pay-percent">100%</span></span></h5>
+            <hr style="margin-left: 2rem;">
+            <!-- <div class="btn btn-lg bg-theme-2 text-white">شروع یادگیری</div> -->
+            <div class="proccess-control">
+            <button class="btn-continue btn btn-lg border border-3 border-primary theme-color2">ادامه یادگیری</button>
+            <div class="d-inline-flex align-items-center w-lg-75 a mx-lg-2">
+                 <div class="d-flex w-100 align-items-center">
+                  <div class="mx-2">40%</div><div class="proccess col-lg-4"></div>
+                 </div>
+                <style>
+                    .proccess::before {
+                        width: 40%;
+                    }
+                </style>
+            </div>
+            </div>
+            
+        </div>
+          <div class="btn col-lg-3 h-img" data-bs-toggle="modal"
+    data-bs-target="#modalvideo">
+            <img
+              width="100%"              
+              src="https://codeyad.com/_ipx/w_200&f_webp&q_90&fit_contain/codeyad/assets/images/Courses/212d3a33-e13a-4ca9-a57f-c12fc44a6a47.png"
+              alt=""
+
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- Modal Body -->
+      <div
+        class="modal fade"
+        id="modalvideo"
+        tabindex="-1"
+        data-bs-keyboard="false"
+        
+        role="dialog"
+        aria-labelledby="modalTitleId"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-scrollable modal-dialog-centered w-lg-25"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalTitleId">
+               آموزش پایتون
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                id="btn_close_modal"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <video width="100%" controls id="video-introduction" src="https://dl.codeyad.com/videos/Courses/Demo/22f19ef2-40e1-482f-baa5-6194adfcafa92010226662863.mp4"></video>
+            </div>
+          <div class="modal-footer px-3 py-3">
+    <div class="d-flex align-items-center justify-content-between w-100 gap-3">
+        
+        <div class="d-flex align-items-center gap-2">
+            <button type="button" class="btn btn-sm" id="btn-fullscreen" style="width: 36px; height: 36px;">
+                <i class="bi bi-fullscreen" style="font-size: 20px;"></i>
+            </button>
+            
+            <button type="button" class="btn btn-sm" id="btn-state" style="width: 42px; height: 42px;">
+                <i class="bi bi-play-fill" style="font-size: 24px;"></i>
+            </button>
+        </div>
+        
+        <div class="flex-grow-1 position-relative mx-2">
+            <div id="proccess-video" class="w-100">
+                <style>
+                  #proccess-video::before {
+                    width: var(--video-width);
+                  }
+                </style>
+            </div>
+        </div>
+        
+        <div id="time-left" class="text-muted small text-center" style="min-width: 45px;">
+            00:00
+        </div>
+        
+    </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+      
+      <!-- Modal Body -->
+      <div
+        class="modal fade"
+        id="modallogin"
+        tabindex="-1"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        
+        role="dialog"
+        aria-labelledby="modalTitleId"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-scrollable modal-dialog-centered w-lg-25"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title text-center" id="modalTitleId">
+                <b class="brand-1">اسموت</b> <b class="brand-2">پلیر</b>
+              </h4>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="" class="form-label">شماره :</label>
+                <input
+                  type="text"
+                  class="form-control form-control-lg smoth-input phone"
+                  name=""
+                  id=""
+                  required
+                  placeholder="شماره خود را وارد کنید"
+                />
+
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">رمزعبور :</label>
+                <input
+                  type="text"
+                  class="form-control form-control-lg smoth-input"
+                  name=""
+                  id=""
+                  required
+                  placeholder="شماره خود را وارد کنید"
+                />
+              </div>
+              <br>
+              <button class="btn bg-theme-2 text-white btn-lg w-100 text-center">ورود</button>
+              <div class="text-muted text-center small mt-1">پس از ورود یعنی شما <a href="">قوانین ما</a> را پذیرفته اید</div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn border border-2 border-primary theme-color2 w-100  btn-lg"> ورود با کد تایید</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Course main -->
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs nav-course" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button
+                class="nav-link active"
+                id="home-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#home"
+                type="button"
+                role="tab"
+                aria-controls="home"
+                aria-selected="true"
+            >
+                سرفصل ها
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button
+                class="nav-link"
+                id="profile-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#profile"
+                type="button"
+                role="tab"
+                aria-controls="profile"
+                aria-selected="false"
+            >
+                ویژگی ها
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button
+                class="nav-link"
+                id="messages-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#messages"
+                type="button"
+                role="tab"
+                aria-controls="messages"
+                aria-selected="false"
+            >
+                توضیحات
+            </button>
+        </li>
+      </ul>
+      
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div
+            class="tab-pane active"
+            id="home"
+            role="tabpanel"
+            aria-labelledby="home-tab"
+        >
+            <div class="accordion-course col-lg-6">
+                <div class="accordion accordion-flush" id="accordion-course">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button
+                                class="accordion-button collapsed border border-2"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne"
+                                aria-expanded="true"
+                                aria-controls="flush-collapseOne"
+                            >
+                                سینتکس ها در پایتون
+                            </button>
+                        </h2>
+                        <div
+                            id="flush-collapseOne"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne"
+                            data-bs-parent="#accordion-course"
+                        >
+                            <div class="accordion-body">
+                                <ol>
+                                <li>
+                                    <a type="button" class="a-content-course">
+                                    رشته ها در پایتون
+                                    <span style="float: left;" class="theme-color2">
+                                        <svg width="28px" height="28px" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.5129 16.9211L9.14648 8.55469" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16.7054 8.31597L8.90766 8.31597L8.90766 16.1137" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                    </span>
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="" class="a-content-course">
+                                    اهداد در پایتون
+                                    <span style="float: left;" class="theme-color2">
+                                        <svg width="28px" height="28px" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.5129 16.9211L9.14648 8.55469" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16.7054 8.31597L8.90766 8.31597L8.90766 16.1137" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                    </span>
+                                </a>
+                                </li>
+                                <li>
+                                    <a href="" class="a-content-course">
+                                    complex  در پایتون
+                                    <span style="float: left;" class="theme-color2">
+                                        <svg width="28px" height="28px" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.5129 16.9211L9.14648 8.55469" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16.7054 8.31597L8.90766 8.31597L8.90766 16.1137" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                                    </span>
+                                </a>
+                                </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button
+                                class="accordion-button collapsed border border-2"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo"
+                                aria-expanded="true"
+                                aria-controls="flush-collapseOne"
+                            >
+                                متغیر ها در پایتون
+                            </button>
+                        </h2>
+                        <div
+                            id="flush-collapseTwo"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne"
+                            data-bs-parent="#accordion-course"
+                        >
+                            <div class="accordion-body">
+                                <ol>
+                                <li>
+    <a href="" class="a-content-course">
+        متغیرها در پایتون
+        <span style="float: left;" class="theme-color2">
+            <svg width="28px" height="28px" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5129 16.9211L9.14648 8.55469" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M16.7054 8.31597L8.90766 8.31597L8.90766 16.1137" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </span>
+    </a>
+</li>
+<li>
+    <a href="" class="a-content-course">
+        لیست‌ها در پایتون
+        <span style="float: left;" class="theme-color2">
+            <svg width="28px" height="28px" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5129 16.9211L9.14648 8.55469" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M16.7054 8.31597L8.90766 8.31597L8.90766 16.1137" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </span>
+    </a>
+</li>
+<li>
+    <a href="" class="a-content-course">
+        تاپل‌ها در پایتون
+        <span style="float: left;" class="theme-color2">
+            <svg width="28px" height="28px" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5129 16.9211L9.14648 8.55469" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M16.7054 8.31597L8.90766 8.31597L8.90766 16.1137" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </span>
+    </a>
+</li>
+<li>
+    <a href="" class="a-content-course">
+        دیکشنری در پایتون
+        <span style="float: left;" class="theme-color2">
+            <svg width="28px" height="28px" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5129 16.9211L9.14648 8.55469" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M16.7054 8.31597L8.90766 8.31597L8.90766 16.1137" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </span>
+    </a>
+</li>
+<li>
+    <a href="" class="a-content-course">
+        مجموعه‌ها در پایتون
+        <span style="float: left;" class="theme-color2">
+            <svg width="28px" height="28px" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5129 16.9211L9.14648 8.55469" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M16.7054 8.31597L8.90766 8.31597L8.90766 16.1137" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </span>
+    </a>
+</li>
+<li>
+    <a href="" class="a-content-course">
+        حلقه‌ها در پایتون (for, while)
+        <span style="float: left;" class="theme-color2">
+            <svg width="28px" height="28px" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5129 16.9211L9.14648 8.55469" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M16.7054 8.31597L8.90766 8.31597L8.90766 16.1137" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </span>
+    </a>
+</li>
+<li>
+    <a href="" class="a-content-course">
+        شرط‌ها در پایتون (if, elif, else)
+        <span style="float: left;" class="theme-color2">
+            <svg width="28px" height="28px" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5129 16.9211L9.14648 8.55469" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M16.7054 8.31597L8.90766 8.31597L8.90766 16.1137" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </span>
+    </a>
+</li>
+<li>
+    <a href="" class="a-content-course">
+        توابع در پایتون (def)
+        <span style="float: left;" class="theme-color2">
+            <svg width="28px" height="28px" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5129 16.9211L9.14648 8.55469" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M16.7054 8.31597L8.90766 8.31597L8.90766 16.1137" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </span>
+    </a>
+</li>
+<li>
+    <a href="" class="a-content-course">
+        کلاس‌ها و شی‌گرایی در پایتون (OOP)
+        <span style="float: left;" class="theme-color2">
+            <svg width="28px" height="28px" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5129 16.9211L9.14648 8.55469" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M16.7054 8.31597L8.90766 8.31597L8.90766 16.1137" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </span>
+    </a>
+</li>
+<li>
+    <a href="" class="a-content-course">
+        ماژول‌ها و کتابخانه‌های پرکاربرد در پایتون
+        <span style="float: left;" class="theme-color2">
+            <svg width="28px" height="28px" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5129 16.9211L9.14648 8.55469" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M16.7054 8.31597L8.90766 8.31597L8.90766 16.1137" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </span>
+    </a>
+</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <div
+            class="tab-pane"
+            id="profile"
+            role="tabpanel"
+            aria-labelledby="profile-tab"
+        >
+        <div class="p-4 pt-5">
+          <h5 class="bold und-right">گواهی گذرانده شدن</h5>
+             <p class="px-3">
+              لورم اید صنعت ما ساختگی صنعت چاپ کاربردی کتابخانه‌های یادگیری 
+              لورم اید صنعت ما ساختگی صنعت چاپ کاربردی کتابخانه‌های یادگیری 
+              لورم اید صنعت ما ساختگی صنعت چاپ کاربردی کتابخانه‌های یادگیری 
+             </p>
+          <h5 class="bold und-right">ارتباط مستقیم با استاد</h5>
+             <p class="px-3">
+              لورم اید صنعت ما ساختگی صنعت چاپ کاربردی کتابخانه‌های یادگیری 
+              لورم اید صنعت ما ساختگی صنعت چاپ کاربردی کتابخانه‌های یادگیری 
+              لورم اید صنعت ما ساختگی صنعت چاپ کاربردی کتابخانه‌های یادگیری 
+             </p>
+          <h5 class="bold und-right">خرید به صورت اقساط</h5>
+          <p class="px-3">
+            لورم اید صنعت ما ساختگی صنعت چاپ کاربردی کتابخانه‌های یادگیری لورم اید صنعت ما ساختگی صنعت چاپ کاربردی کتابخانه‌های یادگیری لورم اید صنعت ما ساختگی صنعت چاپ کاربردی کتابخانه‌های یادگیری            
+          </p>
+          <br>
+          <div class="W-100 d-lg-flex justify-content-center">
+            <div class="col-lg-3 mx-3"><img width="100%" class="rounded-4" src="/img/snappay.jpg" alt="اسنپ پی"></div>
+          </div>
+        </div>
+        </div>
+        <div
+            class="tab-pane"
+            id="messages"
+            role="tabpanel"
+            aria-labelledby="messages-tab"
+        >
+             messages 
+        </div>
+      </div>
+      
+    </main>
+    <footer>
+      <div class="text-center">
+        <h4><b class="brand-1">اسموت</b> <b class="brand-2">پلیر</b></h4>
+        <p>لورم ایسپوم متن ساختگی صنعت چاپ <hr class="mx-lg-5">
+        <span class="theme-color">©</span> تمامی حقوق محفوظه!</p>
+      </div>
+    </footer>
+    <!-- Support -->
+    <div class="support">
+      <a href=""><i class="bi bi-headset"></i></a>
+    </div>
+  </body>
+  <!-- Script ... -->
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/script.js"></script>
+</html>
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اسموت پلیر</title>
+    <link rel="stylesheet" href="css/bootstrap.rtl.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="px-2" style="height: 100vh;">
+        <h4 class="p-3"><b class="theme-color">اسموت </b> <b class="theme-color2">کد</b></h4>
+        <hr>
+        <div class="pay-control">
+            <div class="pay col-lg-5 border border-2">
+                <div class="mx-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="" />
+                    </div>
+                </div>
+                <div class="">
+                    <h6 class="bold theme-color2">خرید نقدی</h6>
+                    <p>م ایسپوم متن ساختگی صنعت چاپ م ایسپوم متن ساختگی صنعت چاپ م ایسپوم متن ساختگی صنعت چاپ </p>
+                </div>
+            </div>
+            <div class="pay col-lg-5 border border-2">
+                <div class="mx-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="" />
+                    </div>
+                </div>
+                <div class="">
+                    <h6 class="bold theme-color2">خرید قسطی</h6>
+                    <p>م ایسپوم متن ساختگی صنعت چاپ م ایسپوم متن ساختگی صنعت چاپ م ایسپوم متن ساختگی صنعت چاپ </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+      <div class="text-center">
+        <h4><b class="brand-1">اسموت</b> <b class="brand-2">پلیر</b></h4>
+        <p>لورم ایسپوم متن ساختگی صنعت چاپ <hr class="mx-lg-5">
+        <span class="theme-color">©</span> تمامی حقوق محفوظه!</p>
+      </div>
+    </footer>
+    <script>
+        document.querySelectorAll('.pay').forEach(element => {
+            var form_check = element.querySelector('input');
+            element.addEventListener('click',()=> {
+                if (!form_check.value) {
+                    element.classList.toggle('border-primary');
+                    form_check.checked = true ;
+                }
+                else {
+                    element.classList.remove('border-primary');
+                    
+                }
+            });
+        });
+    </script>
+    <!-- Scripts -->
+     <script src="/js/bootstrap.min.js"></script>
+     <script src="/js/script.js"></script>
+</body>
+</html>

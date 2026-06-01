@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="fa" dir="rtl" translate="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>اسموت پلیر</title>
+    <link rel="stylesheet" href="css/bootstrap.rtl.css" />
+    <link
+      rel="stylesheet"
+      href="/css/bootstrap-icons-1.13.1/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="alert-custom border border-1">
+      <div class="alert-icon">
+        <i class="bi bi-info text-white rounded-1"></i>
+      </div>
+      <div class="alert-content"></div>
+    </div>
+    <div class="login">
+        <div class="d-flex align-items-stretch justify-content-center w-100">
+            <div class="col-11 col-lg-3 px-2 login-box">
+            <h4 class="text-center"><b class="theme-color2">اسموت</b> <b class="theme-color">کد</b></h4>
+            <br>
+            <h6>کد تایید به شماره <b class="theme-color">09123456789</b> را وارد کنید</h6>
+          <div class="mb-3">
+            <label for="" class="form-label">کدتایید :</label>
+            <div class="d-flex" style="gap: 15px;" dir="ltr">
+            <input
+              type="text"
+              maxlength="1"
+              class="form-control form-control-lg code"
+              name=""
+              id=""
+              
+            />
+            <input
+              type="text"
+              maxlength="1"
+              class="form-control form-control-lg code"
+              name=""
+              id=""
+              
+            />
+            <input
+              type="text"
+              maxlength="1"
+              class="form-control form-control-lg code"
+              name=""
+              id=""
+              
+            />
+            <input
+              type="text"
+              maxlength="1"
+              class="form-control form-control-lg code"
+              name=""
+              id=""
+              
+            />
+            <input
+              type="text"
+              maxlength="1"
+              class="form-control form-control-lg code"
+              name=""
+              id=""
+              
+            />
+            </div>
+          </div>
+          <br>
+          <div class="text-center">
+            <div id="timer"></div>
+          </div>
+          <br>
+          <button class="w-100 btn btn-lg btn-primary">ورود</button>
+          <div class="help-text text-muted text-center small">پس از ورود یعنی <a href="">قوانین</a> را پذیرفته اید</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var timer = document.getElementById('timer');
+      let time_left = 20;
+      var error = false
+      setInterval(()=>{
+        var min = parseInt(time_left / 60)
+        var sec = time_left % 60
+        timer.textContent = `${min}:${sec}`
+        time_left -- ;
+        if (time_left <= 0 ) {
+          time_left = 0 ;
+          timer.classList.add('co-timer');
+          timer.innerHTML = '<button class="btn btn-sm text-primary">درخواست مجدد</button>';
+        }
+        if (time_left <= 10 ) {
+          timer.classList.add('text-danger');
+        }
+        clearInterval(12000);
+      },1000);
+      
+    </script>
+    <!-- Scripts -->
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
+        <script>
+      show_message('خطا دریافت کد')
+    </script>
+  </body>
+</html>

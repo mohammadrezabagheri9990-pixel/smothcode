@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="fa" dir="rtl" translate="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/bootstrap.rtl.css" />
+    <link
+      rel="stylesheet"
+      href="/css/bootstrap-icons-1.13.1/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>موزیک لابف</title>
+  </head>
+  <body>
+    <div class="progress" id="progress"></div>
+    <header>
+      <nav class="navbar d-none d-lg-flex navbar-expand nav-desk">
+        <div class="brand">
+          <b class="brand-1">اسموت</b> <b class="brand-2">پلیر</b>
+        </div>
+        <ul class="nav navbar-nav w-100 justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link nav-a" href="#" aria-current="page">خانه</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-a" href="#">درباره ما</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-a" data-bs-toggle="dropdown"
+              type="button"
+              aria-haspopup="true" id="courses" href="#">دوره ها</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" href="#">مسیر یادگیری</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link nav-a" href="#" data-bs-toggle="modal"
+        data-bs-target="#modallogin">ورود</a>
+          </li>
+        </ul>
+        <div class="search-nav w-25 me-5">
+         <form class="d-flex">
+                <input
+                  class="form-control"
+                  type="search"
+                  placeholder="جست و جو ..."
+                  aria-label="جست و جو"
+                />
+                <button class="btn" type="submit">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-314d6803=""><path d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z" stroke="currentColor" stroke-width="1.5"></path><path d="M18.5 18.5L22 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+                </button>
+              </form>
+        </div>
+      </nav>
+      <nav class="navbar nav-mobile border border-1 d-lg-none">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><b class="brand-1">اسموت</b> <b class="brand-2">پلیر</b></a
+          >
+          <button
+            class="navbar-toggler navbar-toggler-mobile"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <svg
+              width="26px"
+              height="26px"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.2027 4.90034V6.43655H2.79724V4.90034H17.2027Z"
+                fill="currentColor"
+              />
+
+              <path
+                d="M17.2027 9.90034V11.4366H2.79724V9.90034H17.2027Z"
+                fill="currentColor"
+              />
+
+              <path
+                d="M10.9603 14.9003V16.4366H2.79724V14.9003H10.9603Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+      <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <b class="brand-1">اسموت</b> <b class="brand-2">پلیر</b>
+              </h5>
+              <button
+                type="button"
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+            <a class="nav-link text-primary" href="/index.html" aria-current="page">خانه</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-a" href="#">درباره ما</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-a" data-bs-toggle="dropdown"
+              type="button"
+              aria-haspopup="true" id="courses" href="#">دوره ها</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-a" href="/learn-way.html">مسیر یادگیری</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link nav-a" href="/login.html" data-bs-toggle="modal"
+        data-bs-target="#modallogin">ورود</a>
+          </li>
+              </ul>
+              <hr>
+              <div class="search-nav w-25 me-5">
+         <form class="d-flex">
+                <input
+                  class="form-control"
+                  type="search"
+                  placeholder="جست و جو ..."
+                  aria-label="جست و جو"
+                />
+                <button class="btn" type="submit">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-314d6803=""><path d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z" stroke="currentColor" stroke-width="1.5"></path><path d="M18.5 18.5L22 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+                </button>
+              </form>
+        </div>
+            </div>
+          </div>
+      <div class="courses-box border border-1 shadow-lg d-none">
+        <h5 class="bold">دوره ها :</h5>
+        <hr>
+        <div class="px-2">
+          <a href="" class="nav-link my-3">    <i class="bi bi-chevron-left bold theme-color" style="font-size: 14px;"></i>
+ آموزش پایتون</a>
+          <a href="" class="nav-link my-3">    <i class="bi bi-chevron-left bold theme-color" style="font-size: 14px;"></i>
+ آموزش جاوا اسکریپت</a>
+          <a href="" class="nav-link my-3">    <i class="bi bi-chevron-left bold theme-color" style="font-size: 14px;"></i>
+ آموزش کاتلین</a>
+        </div>
+      </div>
+      <div class="header-control">
+        <div class="header-content">
+          <div class="col-lg-6 shad">
+            <h1 class="bold mb-4">
+                <span class="theme-color2">"</span>یادگیری فقط کسب معلومات نیست، بلکه دیدن حقیقت است .<span class="theme-color2">"</span> <span class="h6 text-muted">( ویلیام باتلر ییتس )</span>
+            </h1>
+            <p class="container">
+              لورم ایپسوم متن ساختگی با تولید س ادگی نامفهوم از صنعت چاپ و با
+              کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و
+            </p>
+            <br />
+            <div class="d-flex">
+              <a class="btn btn-theme" href="#" role="button"
+                >شروع یادگیری
+                <svg
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.5129 16.9211L9.14648 8.55469"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M16.7054 8.31597L8.90766 8.31597L8.90766 16.1137"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path></svg
+              ></a>
+
+              <a
+                class="btn bg-light theme-color2 border border-1"
+                href="#"
+                role="button"
+                >درخواست شماوره</a
+              >
+            </div>
+          </div>
+          <div class="col-lg-4 mx-lg-2 h-img">
+            <div class="d-flex justify-content-center align-items-center">
+                <svg class="learn-way-svg" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 6.29297H18.009M18 2.29297C20.165 2.29297 22 4.10797 22 6.30997C22 8.54597 20.135 10.116 18.412 11.183C18.2865 11.2547 18.1445 11.2924 18 11.2924C17.8555 11.2924 17.7135 11.2547 17.588 11.183C15.868 10.107 14 8.55497 14 6.30997C14 4.10797 15.835 2.29297 18 2.29297Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5 22.293C6.65685 22.293 8 20.9498 8 19.293C8 17.6361 6.65685 16.293 5 16.293C3.34315 16.293 2 17.6361 2 19.293C2 20.9498 3.34315 22.293 5 22.293Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 7.29297H9.5C7.567 7.29297 6 8.63597 6 10.293C6 11.95 7.567 13.293 9.5 13.293H12.5C14.433 13.293 16 14.636 16 16.293C16 17.95 14.433 19.293 12.5 19.293H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+        </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- Modal Body -->
+      <div
+        class="modal fade"
+        id="modallogin"
+        tabindex="-1"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        
+        role="dialog"
+        aria-labelledby="modalTitleId"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-scrollable modal-dialog-centered w-lg-25"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title text-center d-block" id="modalTitleId">
+                <b class="brand-1">اسموت</b> <b class="brand-2">پلیر</b>
+              </h4>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="" class="form-label">شماره :</label>
+                <input
+                  type="text"
+                  class="form-control form-control-lg smoth-input phone"
+                  name=""
+                  id=""
+                  required
+                  placeholder="شماره خود را وارد کنید"
+                />
+
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">رمزعبور :</label>
+                <input
+                  type="text"
+                  class="form-control form-control-lg smoth-input"
+                  name=""
+                  id=""
+                  required
+                  placeholder="شماره خود را وارد کنید"
+                />
+              </div>
+              <br>
+              <button class="btn bg-theme-2 text-white btn-lg w-100 text-center">ورود</button>
+              <div class="text-muted text-center small mt-1">پس از ورود یعنی شما <a href="">قوانین ما</a> را پذیرفته اید</div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn border border-2 border-primary theme-color2 w-100  btn-lg"> ورود با کد تایید</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box category">
+        <h2 class="bold mx-2">دسته بندی :</h2>
+        <div class="mx-1k col-12 ct">
+            <div class="d-flex">
+                <div class="col-4 col-lg-2 category-box border border-1">
+                <span></span>
+                <p class="text-center">برنامه نویسی</p>
+            </div>
+            <div class="col-4 col-lg-2 category-box border border-1">
+                <span></span>
+                <p class="text-center">شبکه</p>
+            </div>
+            <div class="col-4 col-lg-2 category-box border border-1">
+                <span></span>
+                <p class="text-center">طراحی موبایل</p>
+            </div>
+            <div class="col-4 col-lg-2 category-box border border-1">
+                <span></span>
+                <p class="text-center">طراحی سایت</p>
+            </div>
+            </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="d-lg-flex justify-content-center">
+          <div class="col-12 col-lg-10">
+            <div class="content-control">
+              <div class="content col-lg-8">
+                <h2>
+              مسیر یادگیری طراحی وب
+            </h2>
+            <div class="container mt-3 cont">
+              <div class="content-blur d-inline">
+                 لورم ایپسوم متن ساختگی با تولید س ادگی نامفهوم از صنعت چاپ و با
+              کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال
+            </div>
+            <button class="show-more btn">نمایش بیشتر <i class="bi bi-chevron-down"></i></button>
+              <div class="d-none text d-inline">
+                 و لورم ایپسوم متن ساختگی با تولید س ادگی نامفهوم از صنعت چاپ و با
+              کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و
+              </div>
+            </div>
+              </div>
+            </div>
+            <hr class="my-4">
+            <div class="content-control">
+              <div class="content col-lg-8">
+                <h2>
+              مسیر یادگیری طراحی وب
+            </h2>
+            <div class="container mt-3 cont">
+              <div class="content-blur d-inline">
+                 لورم ایپسوم متن ساختگی با تولید س ادگی نامفهوم از صنعت چاپ و با
+              کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال
+            </div>
+            <button class="show-more btn">نمایش بیشتر <i class="bi bi-chevron-down"></i></button>
+              <div class="d-none text d-inline">
+                 و لورم ایپسوم متن ساختگی با تولید س ادگی نامفهوم از صنعت چاپ و با
+              کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و
+              </div>
+            </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="text-center">
+        <h4><b class="brand-1">اسموت</b> <b class="brand-2">پلیر</b></h4>
+        <p>لورم ایسپوم متن ساختگی صنعت چاپ <hr class="mx-lg-5">
+        <span class="theme-color">©</span> تمامی حقوق محفوظه!</p>
+      </div>
+    </footer>
+    <!-- Support -->
+    <div class="support">
+      <a href=""><i class="bi bi-headset"></i></a>
+    </div>
+  </body>
+  <!-- Script ... -->
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/script.js"></script>
+</html>
+
